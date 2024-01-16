@@ -1,23 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./contact.css";
+import "./style.css";
+import "./App.css";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import Home from "./Home";
+import MobileNav from "./MobileNav";
+import Contact from "./Contact";
+import Products from "./Products";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import Hero from "./components/Hero";
+import Partners from "./components/partners";
+// import Form from "./components/contact_form";
+// import AppleVr from "./images/appleVR.webp";
 
+// import Footer from "./Footer";
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <div>
+          <Navbar></Navbar>
+
+          <Routes>
+            <Route path="/" element={<Home />}></Route>
+            <Route path="/contact" element={<Contact />}></Route>
+            <Route path="/products" element={<Products />}></Route>
+          </Routes>
+        </div>
+      </Router>
+      {/* <Hero></Hero> */}
+
+      <Footer></Footer>
     </div>
   );
 }

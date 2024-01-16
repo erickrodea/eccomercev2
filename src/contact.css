@@ -1,0 +1,466 @@
+main {
+    height: 110vh;
+    width: 100vw;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    background-color: #03213F;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+nav ul {
+    padding: 0;
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav li {
+    display: inline-block;
+    position: relative;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: inline-block;
+}
+
+nav li:hover>a {
+    background-color: #03213F;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #03213F;
+    top: 100%;
+    /* left: 0; */
+    z-index: 1;
+}
+
+.dropdown-content li {
+    display: block;
+}
+
+.dropdown-content a {
+    padding: 10px;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.productHeading,h4{
+    margin-top: 55px;
+}
+
+#navheadercolor {
+    background-color: #1A9A9D;
+}
+
+#imgcenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: 50%;
+}
+
+.main-nav__item--cta a,
+.mobile-nav__item--cta a {
+    color: rgb(11, 0, 0);
+    background: var(--highlight-color);
+    padding: 0.9rem 1.3rem;
+    border-radius: 8px;
+    background: linear-gradient(to top, rgba(80, 68, 18, 0.6) 10%, transparent),
+        url("cart\ Background\ Removed.png") center/cover no-repeat border-box,
+        #fbfbfc;
+}
+
+footer {
+    background-color: #041bec;
+    text-decoration: none;
+    position: relative;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+}
+
+footer ul {
+    margin: 10;
+    padding: 0px 15px;
+
+
+}
+
+footer li {
+    list-style-type: none
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    grid-auto-flow: row;
+}
+
+.items {
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+
+
+}
+
+form {
+    text-align: left;
+    width: 40VW;
+    /* margin: 20px auto 0; */
+    margin: auto;
+    max-height: 800px;
+    margin-top: 1%;
+}
+
+form label {
+    display: block;
+    width: 40vw;
+    padding: 20px;
+    text-transform: uppercase;
+    font-size: 24pxpx;
+    font-weight: bold;
+    background-color: #333;
+    color: white;
+    text-align: center;
+}
+
+form input {
+    display: block;
+    width: 40vw;
+    padding: 5px;
+    /* margin: 0 0 10px; */
+    border: none;
+    font-size: 22px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    cursor: pointer;
+    margin-bottom: 5%;
+    height: 10vh;
+    text-align: center;
+
+}
+
+form input[type="submit"] {
+    background: #1A9A9D;
+    color: white;
+    cursor: pointer;
+    width: 40vw;
+}
+
+.logo-moving {
+    animation: linearloop 1s linear infinite;
+    height: 150px;
+}
+
+img.logo-moving {
+    width: 320px;
+}
+
+section.grid {
+    display: inline-block
+}
+
+.content {
+    border: solid wheat 20px;
+    background-color: #181A1B;
+    height: 100vh;
+}
+
+
+@media (max-width: 400px) {
+
+
+
+    /* take out image cart */
+    .main-nav__item--cta a,
+    .mobile-nav__item--cta a {
+        color: rgb(11, 0, 0);
+        background: var(--highlight-color);
+        padding: 0.9rem 1.3rem;
+        border-radius: 8px;
+        /* background: linear-gradient(to top, rgba(80, 68, 18, 0.6) 10%, transparent),
+                url("cart\ Background\ Removed.png") center/cover no-repeat border-box,
+                #fbfbfc; */
+    }
+
+    nav a {
+        font-size: 0.7rem;
+        text-align: center;
+    }
+
+
+    .date {
+        font-size: 1rem;
+    }
+
+    iframe {
+        width: 325px;
+        height: 150px;
+    }
+
+    img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .newspage h3 {
+        font-size: 0.6rem;
+    }
+
+    section {
+        font: 20px;
+    }
+
+    article .contact-info {
+        padding: none;
+    }
+
+    .myForm,
+    label {
+        width: 40%;
+        height: 1vh;
+
+    }
+
+    input #fname {
+        width: 40%;
+        height: 1vh;
+    }
+
+    form input {
+        display: block;
+        width: auto;
+        padding: 5px;
+        margin: 10px 0 10px;
+        border: none;
+        font-size: 22px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-style: italic;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+        cursor: pointer;
+
+    }
+
+    form input[type="submit"] {
+        background: #1A9A9D;
+        color: white;
+        cursor: pointer;
+        width: 80%;
+    }
+
+    form label {
+        display: block;
+        width: 80%;
+        padding: 25px;
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: bold;
+        background-color: #333;
+        color: white;
+    }
+
+    .logo-moving {
+        animation: linearloop 9s linear infinite;
+        height: 150px;
+    }
+
+    img.logo-moving {
+        width: 220px;
+    }
+
+    section.grid {
+        display: inline-block
+    }
+
+
+
+}
+
+@media (min-width: 401px) and (max-width: 800px) {
+    nav a {
+        text-align: center;
+    }
+
+    img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .date {
+        font-size: 1.5rem;
+    }
+
+    iframe {
+        width: 475px;
+        height: 250px;
+    }
+
+    .myForm,
+    label {
+        width: 40%;
+        height: 1vh;
+        display: inline-block;
+
+    }
+
+    input #fname {
+        width: 20%;
+        height: 1vh;
+    }
+
+    .myForm,
+    label {
+        width: 40%;
+        height: 1vh;
+
+    }
+
+    input #fname {
+        width: 40%;
+        height: 1vh;
+    }
+
+    form input {
+        display: block;
+        width: 52.5vw;
+        padding: 5px;
+        margin: 0 0 10px;
+        border: none;
+        font-size: 22px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-style: italic;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+        cursor: pointer;
+
+    }
+
+    form input[type="submit"] {
+        background: #1A9A9D;
+        color: white;
+        cursor: pointer;
+        width: 52.5vw;
+    }
+
+    form label {
+        display: block;
+        width: 52.5vw;
+        padding: 20px;
+        text-transform: uppercase;
+        font-size: 15px;
+        font-weight: bold;
+        background-color: #333;
+        color: white;
+    }
+
+    .logo-moving {
+        animation: linearloop 1s linear infinite;
+        height: 160px;
+    }
+
+    img.logo-moving {
+        width: 80px;
+    }
+
+    section.grid {
+        display: inline-block
+    }
+
+    #product-overview {
+        background: linear-gradient(to top, rgba(80, 68, 18, 0.6) 3%, transparent), url(tech.jpeg) center/cover no-repeat border-box, #ff1b68;
+        /* background-image: linear-gradient(180deg, red 70%, blue 60%, rgba(0,0,0,0.5)); */
+        /* background-image: radial-gradient(ellipse farthest-corner at 20% 50%, red, blue 70%, green); */
+        width: 103vw;
+        height: 60vh;
+        /* border: 5px dashed red; */
+        position: relative;
+    }
+
+    .main-nav__item--cta a {
+        color: rgb(11, 0, 0);
+        background: var(--highlight-color);
+        padding: 0.9rem 1.3rem;
+        border-radius: 8px;
+        background: linear-gradient(to top, rgba(80, 68, 18, 0.6) 10%, transparent),
+            url("cart\ Background\ Removed.png") center/cover no-repeat border-box,
+            #fbfbfc;
+    }
+
+    .mobile-nav__item--cta a {
+        background-image: none
+    }
+
+    form {
+        text-align: left;
+        
+        /* margin: 20px auto 0; */
+        margin: 20% auto;
+        max-height: 800px;
+    }
+
+
+}
+
+@media (min-width: 801px) {
+
+
+    .logo-moving {
+        animation: linearloop 4s linear infinite;
+        height: 200px;
+    }
+
+    img.logo-moving {
+        width: 200px;
+    }
+
+    section.grid {
+        display: grid
+    }
+
+    .logo {
+        width: 240px;
+        color: #fff;
+        text-transform: uppercase;
+        flex: none;
+    }
+}
+
+@keyframes linearloop {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-110%);
+        /* Move the logos to the left by 100% of their width */
+    }
+}
