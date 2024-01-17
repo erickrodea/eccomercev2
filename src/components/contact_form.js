@@ -1,48 +1,128 @@
-// function validator() {
-//   var validRegex =
-//     /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z.0-9-]+)*$/;
+import React, { useState } from "react";
 
-//   // Check if the first name is filled and valid
-//   var fName = document.getElementById("fName").value;
-//   if (fName.trim() === "") {
-//     alert("Please fill in your first name.");
-//     document.getElementById("fName").focus();
-//     return false;
-//   } else if (!/^[a-zA-Z]*$/g.test(fName)) {
-//     alert("First name must be a valid name. Please enter actual characters.");
-//     document.getElementById("fName").focus();
-//     return false;
-//   }
+const MyForm = () => {
+  // State variables to keep track of form data, errors, and success message
+  const [formData, setFormData] = useState({
+    fName: "",
+    lName: "",
+    userEmail: "",
+    comments: "",
+  });
 
-//   // Check if the last name is filled and valid
-//   var lName = document.getElementById("lName").value;
-//   if (lName.trim() === "") {
-//     alert("Please fill in your last name.");
-//     document.getElementById("lName").focus();
-//     return false;
-//   } else if (!/^[a-zA-Z]*$/g.test(lName)) {
-//     alert("Last name must be a valid name. Please enter actual characters.");
-//     document.getElementById("lName").focus();
-//     return false;
-//   }
+  const [errors, setErrors] = useState({});
+  const [successMessage, setSuccessMessage] = useState("");
 
-//   // Check if the email is filled and valid
-//   var userEmail = document.getElementById("userEmail").value;
-//   if (userEmail.trim() === "") {
-//     alert("Please fill in your email.");
-//     document.getElementById("userEmail").focus();
-//     return false;
-//   } else if (!validRegex.test(userEmail.trim())) {
-//     alert("Email is not valid. Please enter a valid email address.");
-//     document.getElementById("userEmail").focus();
-//     return false;
-//   } else {
-//     alert(userEmail + " your email was valid");
-//   }
+  // Function to handle form validation
+  const handleValidation = (e) => {
+    e.preventDefault();
 
-//   // Additional validation for other fields can be added here
+    // Validation logic
+    const newErrors = {};
+    if (!formData.fName) {
+      newErrors.fName = "First name is required";
+    }
+    if (!formData.lName) {
+      newErrors.lName = "Last name is required";
+    }
+    if (!formData.userEmail) {
+      newErrors.userEmail = "Email is required";
+    } else if (!/\S+@\S+\.\S+/.test(formData.userEmail)) {
+      newErrors.userEmail = "Invalid email address";
+    }
 
-//   // If all validations pass, you can submit the form
-//   alert("Form validation passed. Submitting form...");
-//   return true;
-// }
+    if (Object.keys(newErrors).length === 0) {
+      // If no errors, update success message and clear errors
+
+      setSuccessMessage("Form submitted successfully!");
+
+      // Reset form data after successful submission
+      setFormData({
+        fName: "",
+        lName: "",
+        userEmail: "",
+        comments: "",
+      });
+
+      // Clear success message after 3 seconds (adjust as needed)
+      setTimeout(() => {
+        setSuccessMessage("");
+      }, 3000);
+    } else {
+      // If there are errors, update the state with the error messages
+      setSuccessMessage("");
+      setErrors(newErrors);
+
+      // Clear errors after 3 seconds (adjust as needed)
+      setTimeout(() => {
+        setErrors("");
+      }, 3000);
+    }
+  };
+
+  // Function to update form data as the user types
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.id]: e.target.value });
+  };
+
+  return (
+    // Form section with a unique class for styling
+    <section className="content">
+      {/* Form with an id for identification and onSubmit event to trigger validation */}
+      <form id="myForm" onSubmit={handleValidation}>
+        {/* Input field for the first name with placeholder and onChange event */}
+        <label htmlFor="fName">Your First Name</label>
+        <input
+          type="text"
+          id="fName"
+          placeholder="Erick"
+          value={formData.fName}
+          onChange={handleChange}
+        />
+        {/* Display error message for first name if it exists */}
+        {errors.fName && <p>{errors.fName}</p>}
+
+        {/* Input field for the last name with placeholder and onChange event */}
+        <label htmlFor="lName">Your Last Name</label>
+        <input
+          type="text"
+          id="lName"
+          placeholder="Rodea"
+          value={formData.lName}
+          onChange={handleChange}
+        />
+        {/* Display error message for last name if it exists */}
+        {errors.lName && <p>{errors.lName}</p>}
+
+        {/* Input field for the email with placeholder and onChange event */}
+        <label htmlFor="userEmail">Your Email</label>
+        <input
+          id="userEmail"
+          placeholder="rodea.erick97@gmail.com"
+          value={formData.userEmail}
+          onChange={handleChange}
+        />
+        {/* Display error message for email if it exists */}
+        {errors.userEmail && <p>{errors.userEmail}</p>}
+
+        {/* Input field for comments with placeholder and onChange event */}
+        <label htmlFor="comments">Comments</label>
+        <input
+          type="text"
+          id="comments"
+          placeholder="Your Concerns"
+          value={formData.comments}
+          onChange={handleChange}
+        />
+
+        {/* Submit button to trigger form validation */}
+        <input type="submit" value="submit" />
+
+        {/* Display success message if it exists */}
+        {successMessage && <p>{successMessage}</p>}
+      </form>
+    </section>
+  );
+};
+
+// Export the component for use in other parts of the application
+export default MyForm;

@@ -1,0 +1,242 @@
+#back {
+    display: flex;
+    justify-content: center;
+    background-color: black;
+}
+
+.container {
+    width: 80vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    justify-items: center;
+    align-items: center;
+    grid-row-gap: 30px;
+    margin-top: 20%;
+    margin-bottom: 20%;
+
+}
+
+.product {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    height: 50vh;
+    box-shadow: 20px 15px 0px 0px #0121f2;
+
+}
+
+.product:hover {
+    transform: scale(0.9);
+    transition: all 0.5s;
+    transition-delay: 0.2s;
+}
+
+
+.product img {
+    height: 350px;
+    width: 270px;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+.description h4,
+h5 {
+    margin: 0;
+    text-align: center;
+    font-family: DM serif display;
+}
+
+.description h5 {
+    width: 230px;
+}
+
+section.grid {
+    display: block
+}
+
+
+.main-nav__item--cta a,
+.mobile-nav__item--cta a {
+    color: rgb(11, 0, 0);
+    background: var(--highlight-color);
+    padding: 0.9rem 1.3rem;
+    border-radius: 8px;
+    background: linear-gradient(to top, rgba(80, 68, 18, 0.6) 10%, transparent),
+        url("cart\ Background\ Removed.png") center/cover no-repeat border-box,
+        #fbfbfc;
+}
+
+@media (max-width: 400px) {
+    nav a {
+        font-size: 0.7rem;
+        text-align: center;
+    }
+
+
+    .date {
+        font-size: 1rem;
+    }
+
+    iframe {
+        width: 325px;
+        height: 150px;
+    }
+
+    img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .newspage h3 {
+        font-size: 0.6rem;
+    }
+
+    section {
+        font: 20px;
+    }
+
+    .main-nav__item--cta a,
+    .mobile-nav__item--cta a {
+        color: rgb(11, 0, 0);
+        background: var(--highlight-color);
+        padding: 0.9rem 1.3rem;
+        border-radius: 8px;
+
+    }
+
+
+    .logo-moving {
+        animation: linearloop 1s linear infinite;
+        height: 150px;
+    }
+
+    img.logo-moving {
+        width: 220px;
+    }
+
+    section.grid {
+        display: inline-block
+    }
+
+
+
+}
+
+@media (min-width: 401px) and (max-width: 800px) {
+    nav a {
+        text-align: center;
+    }
+
+    img {
+        width: 20px;
+        height: 20px;
+    }
+
+
+
+    .logo-moving {
+        animation: linearloop 9s linear infinite;
+        height: 160px;
+    }
+
+    img.logo-moving {
+        width: 200px;
+    }
+
+    section.grid {
+        display: inline-block
+    }
+
+    #product-overview {
+        background: linear-gradient(to top, rgba(80, 68, 18, 0.6) 3%, transparent), url(tech.jpeg) center/cover no-repeat border-box, #ff1b68;
+
+        width: 103vw;
+        height: 50vh;
+        position: relative;
+        margin-top: 5%;
+    }
+
+    .main-nav__item--cta a,
+    .mobile-nav__item--cta a {
+        color: rgb(11, 0, 0);
+        padding: 0.9rem 1.3rem;
+        border-radius: 8px;
+    }
+
+    .main-nav__item--cta a {
+        color: rgb(11, 0, 0);
+        background: var(--highlight-color);
+        padding: 0.6rem 1.3rem;
+        border-radius: 8px;
+        background: linear-gradient(to top, rgba(80, 68, 18, 0.6) 10%, transparent),
+            url("cart\ Background\ Removed.png") center/cover no-repeat border-box,
+            #fbfbfc;
+    }
+
+    .mobile-nav__item--cta a {
+        background-image: none
+    }
+
+
+
+
+
+}
+
+@media (min-width: 801px) {
+    .date {
+        font-size: 1.75rem;
+    }
+
+    .logo-moving {
+        animation: linearloop 4s linear infinite;
+        height: 200px;
+    }
+
+    img.logo-moving {
+        width: 250px;
+    }
+
+    section.grid {
+        display: grid
+    }
+
+    .main-nav__item--cta a,
+    .mobile-nav__item--cta a {
+        color: rgb(11, 0, 0);
+        padding: 0.9rem 1.3rem;
+        border-radius: 8px;
+
+    }
+
+    .main-nav__item--cta a,
+    .mobile-nav__item--cta a {
+        color: rgb(11, 0, 0);
+        /* background: var(--highlight-color); */
+        padding: 0.6rem 1.3rem;
+        border-radius: 8px;
+        background: linear-gradient(to top, rgba(80, 68, 18, 0.6) 10%, transparent),
+            url("cart\ Background\ Removed.png") center/cover no-repeat border-box,
+            #fbfbfc;
+    }
+
+
+
+}
+
+@keyframes linearloop {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-110%);
+        /* Move the logos to the left by 100% of their width */
+    }
+}

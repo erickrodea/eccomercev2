@@ -11,6 +11,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import Partners from "./components/partners";
+import Sliders from "./Sliders";
 // import Form from "./components/contact_form";
 // import AppleVr from "./images/appleVR.webp";
 
@@ -29,8 +30,6 @@ function App() {
           </Routes>
         </div>
       </Router>
-      {/* <Hero></Hero> */}
-
       <Footer></Footer>
     </div>
   );

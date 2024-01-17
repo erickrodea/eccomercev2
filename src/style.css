@@ -354,7 +354,7 @@ hgroup {
 
 .hImageWrapper {
     display: inline-block;
-    max-height: 100%;
+    max-height: 110%;
     max-width: 100%;
     overflow: hidden;
 }
@@ -369,8 +369,12 @@ h1.productHeading {
     color:black
 }
 
-
-
+div.frame{
+    height: 800px;
+}
+img.frame{
+    height: 900px;
+}
 /* media on phone */
 
 @media (min-width: 401px) and (max-width: 800px) {

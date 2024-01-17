@@ -19,6 +19,7 @@ body {
     background-color: white;
 }
 
+
 nav ul {
     padding: 0;
     position: relative;
@@ -128,7 +129,30 @@ footer li {
 
 
 }
+form p {
+    color: #ff0000;
+    /* Red color for error messages */
+    font-size: 14px;
+    margin: 5px 0 0;
+    /* Adjust margin for spacing */
+}
 
+/* Apply specific styles to each error message */
+form p#fNameError,
+form p#lNameError,
+form p#userEmailError {
+    font-weight: bold;
+    /* Add any additional styles as needed */
+}
+
+/* Add styles for success message */
+form p.success {
+    color: #008000;
+    /* Green color for success message */
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+}
 form {
     text-align: left;
     width: 40VW;
@@ -154,6 +178,7 @@ form input {
     display: block;
     width: 40vw;
     padding: 5px;
+    
     /* margin: 0 0 10px; */
     border: none;
     font-size: 22px;
@@ -163,7 +188,7 @@ form input {
     text-rendering: optimizeLegibility;
     cursor: pointer;
     margin-bottom: 5%;
-    height: 10vh;
+    height: 8vh;
     text-align: center;
 
 }
@@ -191,7 +216,7 @@ section.grid {
 .content {
     border: solid wheat 20px;
     background-color: #181A1B;
-    height: 100vh;
+    height: 120vh;
 }
 
 
@@ -312,7 +337,7 @@ section.grid {
 
     img {
         width: 20px;
-        height: 20px;
+        /* height: 20px; */
     }
 
     .date {
@@ -452,6 +477,29 @@ section.grid {
         text-transform: uppercase;
         flex: none;
     }
+    /* form input{
+        margin-top: 20px;
+    } */
+    form label{
+        margin-top:15%
+    }
+        form input {
+            display: block;
+            width: 40vw;
+            padding: 5px;
+            /* margin: 0 0 10px; */
+            border: none;
+            font-size: 22px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-style: italic;
+            -webkit-font-smoothing: antialiased;
+            text-rendering: optimizeLegibility;
+            cursor: pointer;
+            margin-bottom: 5%;
+            height: 5vh;
+            text-align: center;
+        }
+    
 }
 
 @keyframes linearloop {
