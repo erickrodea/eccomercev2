@@ -8,7 +8,8 @@ import meetingImage from "./images/AppleVisionProFeatures.png";
 import form from "./components/contact_form"
 import SlideShow from "./components/SlideShow";
 
-
+import Hero from "./components/Hero";
+import MNav from "./components/mNav";
 
 
 const Home = () => {
@@ -21,13 +22,9 @@ const Home = () => {
   <link rel="stylesheet" href="main.css" />
   <div className="backdrop" />
   <header className="main-header">
-    <div>
-      <button className="toggle-button">
-        <span className="toggle-button__bar" />
-        <span className="toggle-button__bar" />
-        <span className="toggle-button__bar" />
-      </button>
-      <a href="index.html" className="main-header__brand">
+        <div>
+     <MNav></MNav>
+      <a href="/" className="main-header__brand">
         <img src="envision Background Removed.png" alt="Envision logo" />
       </a>
     </div>
@@ -46,115 +43,13 @@ const Home = () => {
       </ul>
     </nav>
   </header>
-  <nav className="mobile-nav">
-    <ul className="mobile-nav__items">
-      <li className="mobile-nav__item">
-        <a href="products">Products</a>
-      </li>
-      <li className="mobile-nav__item">
-        <a href="contact">Contact Page</a>
-      </li>
-      <li className="mobile-nav__item mobile-nav__item--cta">
-        <a href="#">Shopping Cart</a>
-      </li>
-    </ul>
-  </nav>
   <section id="product-overview">
     <h2>Envision a New Frontier.</h2>
   </section>
-  <main>
-    <section id="partners">
-      <h1 className="productHeading">Proudly partnered with</h1>
-      <div className="moving-logos">
-        <div className="track-horizontal">
-         
-          <div className="logo">
-            <img
-              src="https://assets-global.website-files.com/6373c87ac909275b0923105c/63b316a5b1372bb1966e26d0_Amazon.png"
-              loading="lazy"
-              sizes="(max-width: 991px) 100vw, 15vw"
-              srcSet="https://assets-global.website-files.com/6373c87ac909275b0923105c/63b316a5b1372bb1966e26d0_Amazon-p-500.png 500w, https://assets-global.website-files.com/6373c87ac909275b0923105c/63b316a5b1372bb1966e26d0_Amazon.png 500w"
-              alt=""
-              className="logo-moving"
-            />
-          </div>
-          <div className="logo">
-            <img
-              src="https://assets-global.website-files.com/6373c87ac909275b0923105c/63b316a5b01ec35697c05416_Google%20Partner.png"
-              loading="lazy"
-              sizes="(max-width: 991px) 100vw, 15vw"
-              srcSet="https://assets-global.website-files.com/6373c87ac909275b0923105c/63b316a5b01ec35697c05416_Google%20Partner-p-500.png 500w, https://assets-global.website-files.com/6373c87ac909275b0923105c/63b316a5b01ec35697c05416_Google%20Partner.png 500w"
-              alt=""
-              className="logo-moving"
-            />
-          </div>
-          <div className="logo">
-            <img
-              src="https://assets-global.website-files.com/6373c87ac909275b0923105c/63b316a5ea66e8c6d1b45235_Hubspot%20Platinum.png"
-              loading="lazy"
-              sizes="(max-width: 991px) 100vw, 15vw"
-              srcSet="https://assets-global.website-files.com/6373c87ac909275b0923105c/63b316a5ea66e8c6d1b45235_Hubspot%20Platinum-p-500.png 500w, https://assets-global.website-files.com/6373c87ac909275b0923105c/63b316a5ea66e8c6d1b45235_Hubspot%20Platinum.png 500w"
-              alt=""
-              className="logo-moving"
-            />
-          </div>
-          <div className="logo">
-            <img
-              src="https://assets-global.website-files.com/6373c87ac909275b0923105c/63b316a613820040d4759585_Meta.png"
-              loading="lazy"
-              sizes="(max-width: 991px) 100vw, 15vw"
-              srcSet="https://assets-global.website-files.com/6373c87ac909275b0923105c/63b316a613820040d4759585_Meta-p-500.png 500w, https://assets-global.website-files.com/6373c87ac909275b0923105c/63b316a613820040d4759585_Meta.png 500w"
-              alt=""
-              className="logo-moving"
-            />
-          </div>
-          <div className="logo">
-            <img
-              src="https://assets-global.website-files.com/6373c87ac909275b0923105c/63b316a65a8164db24e9c7a1_Digital%20Agency%20Network.png"
-              loading="lazy"
-              sizes="(max-width: 991px) 100vw, 15vw"
-              srcSet="https://assets-global.website-files.com/6373c87ac909275b0923105c/63b316a65a8164db24e9c7a1_Digital%20Agency%20Network-p-500.png 500w, https://assets-global.website-files.com/6373c87ac909275b0923105c/63b316a65a8164db24e9c7a1_Digital%20Agency%20Network.png 500w"
-              alt=""
-              className="logo-moving"
-            />
-          </div>
-          <div className="logo">
-            <img
-              src="https://assets-global.website-files.com/6373c87ac909275b0923105c/644821b2a0243d5c79bfa5b4_KlaviyoPartner_updated.png"
-              loading="lazy"
-              sizes="(max-width: 991px) 100vw, 15vw"
-              srcSet="https://assets-global.website-files.com/6373c87ac909275b0923105c/644821b2a0243d5c79bfa5b4_KlaviyoPartner_updated-p-500.png 500w, https://assets-global.website-files.com/6373c87ac909275b0923105c/644821b2a0243d5c79bfa5b4_KlaviyoPartner_updated-p-800.png 800w, https://assets-global.website-files.com/6373c87ac909275b0923105c/644821b2a0243d5c79bfa5b4_KlaviyoPartner_updated-p-1080.png 1080w, https://assets-global.website-files.com/6373c87ac909275b0923105c/644821b2a0243d5c79bfa5b4_KlaviyoPartner_updated.png 1500w"
-              alt=""
-              className="logo-moving"
-            />
-          </div>
-          <div className="logo">
-            <img
-              src="https://assets-global.website-files.com/6373c87ac909275b0923105c/63b316a54de0334f1a87557b_Shopify.png"
-              loading="lazy"
-              sizes="(max-width: 991px) 100vw, 15vw"
-              srcSet="https://assets-global.website-files.com/6373c87ac909275b0923105c/63b316a54de0334f1a87557b_Shopify-p-500.png 500w, https://assets-global.website-files.com/6373c87ac909275b0923105c/63b316a54de0334f1a87557b_Shopify.png 500w"
-              alt=""
-              className="logo-moving"
-            />
-          </div>
-          <div className="logo">
-            <img
-              src="https://assets-global.website-files.com/6373c87ac909275b0923105c/63b316a5b1372bb1966e26d0_Amazon.png"
-              loading="lazy"
-              sizes="(max-width: 991px) 100vw, 15vw"
-              srcSet="https://assets-global.website-files.com/6373c87ac909275b0923105c/63b316a5b1372bb1966e26d0_Amazon-p-500.png 500w, https://assets-global.website-files.com/6373c87ac909275b0923105c/63b316a5b1372bb1966e26d0_Amazon.png 500w"
-              alt=""
-              className="logo-moving"
-            />
-          </div>
-        
-         
-       
-        </div>
-      </div>
-    </section>
-  </main>
+      <main>
+        <Hero></Hero>
+ </main>
+  
    <section className="hero">
         <hgroup className="heroSection">
           <h1 className="hero-heading">

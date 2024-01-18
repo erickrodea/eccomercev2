@@ -4,7 +4,6 @@ import "./style.css";
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Home from "./Home";
-import MobileNav from "./MobileNav";
 import Contact from "./Contact";
 import Products from "./Products";
 import Navbar from "./components/Navbar";
@@ -12,17 +11,14 @@ import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import Partners from "./components/partners";
 import Sliders from "./Sliders";
-// import Form from "./components/contact_form";
-// import AppleVr from "./images/appleVR.webp";
+import Mobile from "./components/mNav";
 
-// import Footer from "./Footer";
 function App() {
   return (
     <div className="App">
       <Router>
         <div>
           <Navbar></Navbar>
-
           <Routes>
             <Route path="/" element={<Home />}></Route>
             <Route path="/contact" element={<Contact />}></Route>

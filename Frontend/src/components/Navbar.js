@@ -1,17 +1,15 @@
 import React from "react";
+import Mobile from "./mNav";
 
 export default function Navbar() {
   return (
     <div>
       <header class="main-header">
+        <Mobile></Mobile>
         <div>
-          <button class="toggle-button">
-            <span class="toggle-button__bar"></span>
-            <span class="toggle-button__bar"></span>
-            <span class="toggle-button__bar"></span>
-          </button>
+          <button class="toggle-button">{""}</button>
           <a href="/" class="main-header__brand">
-            Home
+            <img src="envision Background Removed.png" alt="Envision logo" />
           </a>
         </div>
         <nav class="main-nav">
