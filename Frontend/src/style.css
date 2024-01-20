@@ -19,6 +19,7 @@ a {
     color: white;
 }
 
+
 body {
     font-family: "Montserrat", sans-serif;
     margin: 0;
@@ -342,6 +343,7 @@ hgroup {
     margin-bottom: 4px;
 }
 
+
 .heroImage {
 
     position: relative;
@@ -378,6 +380,12 @@ img.frame{
 /* media on phone */
 
 @media (min-width: 401px) and (max-width: 800px) {
+    div.frame{
+        height: 472px;
+    }
+    .frame{
+        height: 200px;
+    }
     .main-footer__link {
         margin: 0 1rem;
     }
@@ -501,6 +509,9 @@ img.frame{
 }
 
 @media (min-width: 801px) and (max-width: 1000px) {
+    div.frame {
+            height: 510px;
+        }
     .main-footer__link {
         margin: 0 1rem;
     }

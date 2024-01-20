@@ -61,6 +61,14 @@ main {
 }
 
 @media (min-width: 401px) and (max-width: 800px) {
+  main{
+    height: 5vh;
+    width: 10vw;
+  }
+  .carousel .slide img {
+    width: 200px;
+    height:400px
+  }
 
   #product-overview {
     background: linear-gradient(to top, rgba(80, 68, 18, 0.6) 10%, transparent),

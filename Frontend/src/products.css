@@ -22,7 +22,6 @@
     align-items: center;
     justify-items: center;
     height: 50vh;
-    box-shadow: 20px 15px 0px 0px #0121f2;
 
 }
 
@@ -129,6 +128,10 @@ section.grid {
 }
 
 @media (min-width: 401px) and (max-width: 800px) {
+    div.filter-container{
+        height:8vh;
+        margin-top: 100px;
+    }
     nav a {
         text-align: center;
     }
@@ -190,6 +193,10 @@ section.grid {
 }
 
 @media (min-width: 801px) {
+    div.filter-container {
+            height: 8vh;
+            margin-top: 100px;
+        }
     .date {
         font-size: 1.75rem;
     }
