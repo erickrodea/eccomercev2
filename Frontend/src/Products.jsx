@@ -12,7 +12,7 @@ export default function Products() {
 
 
   useEffect(() => {
-    fetch('http://localhost:3001/products') // Assuming your API endpoint is /products
+    fetch('https://ecom-backends.onrender.com/products') // Assuming your API endpoint is /products
       .then(res => res.json())
       .then(data => {
         setProducts(data);
