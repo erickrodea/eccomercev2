@@ -43,7 +43,7 @@ const MyForm = () => {
         comments: "",
       });
 
-      // Clear success message after 3 seconds (adjust as needed)
+      // Clear success message after 3 seconds
       setTimeout(() => {
         setSuccessMessage("");
       }, 3000);
@@ -52,7 +52,7 @@ const MyForm = () => {
       setSuccessMessage("");
       setErrors(newErrors);
 
-      // Clear errors after 3 seconds (adjust as needed)
+      // Clear errors after 3 seconds
       setTimeout(() => {
         setErrors("");
       }, 3000);
@@ -60,6 +60,8 @@ const MyForm = () => {
   };
 
   // Function to update form data as the user types
+  // this line of code is updating the form data in a React state by creating a new object that includes all the existing form data and updates the property corresponding to the input field being changed.
+  // The use of the spread operator ensures that immutability is maintained, as it creates a new object without directly modifying the origina
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.id]: e.target.value });
   };
